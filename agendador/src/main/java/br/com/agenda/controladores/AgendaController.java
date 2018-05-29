@@ -29,10 +29,13 @@ public class AgendaController {
 
     @RequestMapping(value = "/adicionar", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public Agenda adicionarAgenda(@RequestBody Agenda agenda) {
-	// FALTA FAZER A VALIDACAO
-
 	service.inserir(agenda);
 	return agenda;
+    }
+
+    @RequestMapping(value = "/remover", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public void removerAgenda(@RequestBody Agenda agenda) {
+	service.remover(agenda);
     }
 
 }
