@@ -1,2 +1,4 @@
-.\cliente\bower_components
-.\cliente\node_modules
+./cliente/bower_components/
+./cliente/node_modules/
+cliente/bower_components/
+cliente/node_modules/
