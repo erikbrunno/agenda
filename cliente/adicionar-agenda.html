@@ -1,0 +1,43 @@
+<form> 
+  <div class="jumbotron">
+    <div class="container">
+      <h2>Novo Evento</h2>
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" class="form-control" ng-model="agenda.nome" >
+      </div>
+      <div class="col-xs-10 col-xs-offset-2" style="text-align: left; margin: 0px 0px 0px">
+        <div class="col-xs-4 col-xs-offset-1 tamanho-div">
+          <label for="nome">Data inicio</label>
+          <p class="input-group" style="max-width: 200px">
+            <input type="date" ng-model="agenda.dataInicio" class="form-control" placeholder="dd/MM/yyyy">
+            <div 
+              uib-timepicker
+              ng-model="agenda.horaInicio"
+              hour-step="1"
+              minute-step="15"
+              show-meridian="true">
+            </div>
+          </p>
+        </div>
+        <div class="col-xs-4 col-xs-offset-1 tamanho-div">
+          <label for="nome">Data fim</label>
+          <p class="input-group" style="max-width: 250px">
+          <input type="date" ng-model="agenda.dataFim" class="form-control" placeholder="dd/MM/yyyy">
+            <div 
+              uib-timepicker
+              ng-model="agenda.horaFim"
+              hour-step="1"
+              minute-step="15"
+              show-meridian="true">
+            </div>
+          </p>  
+        </div>
+        <div class="col-xs-2 col-xs-offset-1 tamanho-div">
+          <button class="btn btn-primary pull-right" ng-click="c.adicionarEvento(agenda)">Adicionar</button>
+          <button class="btn btn-primary" ng-click="$close()">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

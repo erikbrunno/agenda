@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="listaAgenda">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="pt-br" />
+    <base href="/">
+    
+    <script src="https://unpkg.com/interactjs@1"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/bower_components/angularjs-toaster/toaster.min.js"></script>
+    <script src="/bower_components/moment/moment.js"></script>
+    <script src="https://unpkg.com/angular-ui-bootstrap@2/dist/ui-bootstrap-tpls.js"></script>
+    <script src="https://unpkg.com/rrule@2"></script>
+    <script src="https://unpkg.com/angular-bootstrap-colorpicker@3"></script>
+    <script src="https://unpkg.com/angular-bootstrap-calendar"></script>
+    
+    <link href="https://unpkg.com/bootstrap@3/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="https://unpkg.com/angular-bootstrap-colorpicker@3/css/colorpicker.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/1.1.0/toaster.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/estilo.css" />
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers/listaAgendaCtrl.js"></script>
+    <script src="js/controllers/adicionarEventoCtrl.js"></script>
+    <script src="js/services/agendaAPIService.js"></script>
+    <script src="js/services/agendaFactoryModal.js"></script>
+    <script src="js/value/configValue.js"></script>
+    <script src="js/value/routeConfig.js"></script>   
+  </head>
+  <body>
+    <toaster-container></toaster-container>
+    <li><a href="#/agendaEventos">Lista</a></li>
+    <li><a href="#/adicionarEvento">Adicionar</a></li>
+    <div ng-view></div>
+  </body>
+</html>

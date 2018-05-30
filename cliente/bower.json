@@ -1,0 +1,24 @@
+{
+  "name": "cliente",
+  "description": "agenda de compromisso",
+  "main": "assets/scripts/main.js",
+  "keywords": [
+    "agenda"
+  ],
+  "authors": [
+    "erik brunno"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap-calendar": "^1.0.0"
+  }
+}

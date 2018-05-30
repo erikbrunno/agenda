@@ -1,0 +1,1 @@
+angular.module('listaAgenda', ['mwl.calendar', 'ngAnimate', 'ui.bootstrap', 'colorpicker.module', 'ngRoute', 'toaster']);
