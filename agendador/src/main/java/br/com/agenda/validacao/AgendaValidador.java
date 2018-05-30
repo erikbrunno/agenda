@@ -1,6 +1,7 @@
 package br.com.agenda.validacao;
 
 import java.text.MessageFormat;
+import java.time.LocalDate;
 
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,13 @@ public class AgendaValidador {
 
     public void validar(Agenda agenda) {
 	validarCamposObrigatorios(agenda);
+	validarDataHora(agenda);
+    }
+
+    private void validarDataHora(Agenda agenda) {
+	if (agenda.getDataInicio().isBefore(LocalDate.now())) {
+	    throw new NegocioException(ConstanteUtil.MSG_DATA_INICIO_OU_FIM_MAIOR_DATA_ATUAL);
+	}
 
 	if (agenda.getDataInicio().compareTo(agenda.getDataFim()) > 0) {
 	    throw new NegocioException(ConstanteUtil.MSG_DATA_INICIO_MAIOR_DATA_FIM);
