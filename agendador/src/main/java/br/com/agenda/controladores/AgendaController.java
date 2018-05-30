@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.agenda.modelo.Agenda;
 import br.com.agenda.servicos.AgendaService;
+import br.com.agenda.validacao.AgendaValidador;
 
 @RestController
 @RequestMapping("/agenda/")
@@ -20,6 +21,9 @@ public class AgendaController {
 
     @Autowired
     private AgendaService service;
+
+    @Autowired
+    private AgendaValidador validador;
 
     @ResponseStatus(HttpStatus.OK)
     @RequestMapping(value = "/consulta", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -29,6 +33,7 @@ public class AgendaController {
 
     @RequestMapping(value = "/adicionar", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public Agenda adicionarAgenda(@RequestBody Agenda agenda) {
+	validador.validar(agenda);
 	service.inserir(agenda);
 	return agenda;
     }
