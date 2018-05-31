@@ -26,13 +26,8 @@ public class AgendaService {
     }
 
     @Transactional
-    public Agenda buscarPorId(Long id) {
-	return repository.findOne(id);
-    }
-
-    @Transactional
     public List<Agenda> consultarAgenda() {
-	return repository.findAll();
+	return repository.findAllByOrderByHoraInicioAsc();
     }
 
 }
