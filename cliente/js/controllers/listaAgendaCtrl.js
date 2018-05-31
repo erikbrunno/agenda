@@ -48,18 +48,7 @@ angular.module('listaAgenda').controller('listaAgendaCtrl', function(agendaAPI, 
     vm.cellIsOpen = true;
 
     vm.eventClicked = function(event) {
-      console.log('Entrou aqui');
       alert.show('Clicked', event);
-    };
-
-    vm.eventEdited = function(event) {
-      console.log('Entrou aqui2');
-      alert.show('Edited', event);
-    };
-
-    vm.eventTimesChanged = function(event) {
-      console.log('Entrou aqui4');
-      alert.show('Dropped or resized', event);
     };
 
     vm.timespanClicked = function(date, cell) {
@@ -79,14 +68,6 @@ angular.module('listaAgenda').controller('listaAgendaCtrl', function(agendaAPI, 
         }
       }
     };
-
-    vm.toggle = function($event, field, event) {
-      console.log('parece ser lixo');
-      $event.preventDefault();
-      $event.stopPropagation();
-      event[field] = !event[field];
-    };
-
     //Carrega todos os eventos
     carregarAgenda();
   });
