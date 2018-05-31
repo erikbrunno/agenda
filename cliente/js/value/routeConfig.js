@@ -1,6 +1,6 @@
 // Definindo Rotas
 angular.module('listaAgenda').config(function($routeProvider, $locationProvider){
-    $routeProvider.when('/agendaEventos', {
+    $routeProvider.when('/', {
       templateUrl: 'listar-agenda.html',
       controller: 'listaAgendaCtrl',
       controllerAs: 'vm' //Alias da controller   
